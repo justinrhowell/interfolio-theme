@@ -1,0 +1,65 @@
+.type-inf_team_member{
+    padding-top: 40px;
+    .entry-content, .entry-header{
+        max-width: 800px;
+        margin: 0 auto;
+        .desktop{
+            display: none;
+        }
+    }
+
+    .entry-header{
+        margin-bottom: 20px;
+        text-align: center;
+        h1, .title, a{
+            margin: 20px 0;
+        }
+        h1{
+            @include fluid-type(28px, 40px);
+        }
+        .title{
+            font-family: $_gotham_book;
+        }
+        a{
+            color: $_black;
+            &.social-media{
+                color: $_red;
+                font-size: 30px;
+                &:not(:last-of-type){
+                    margin-right: 10px;
+                }
+            }
+        }
+
+    }
+    .entry-content{
+        margin-bottom: 40px;
+        a.team-link.mobile{
+            display: block;
+            text-align: center;
+            color: white;
+            background-color: $_darkblue;
+            padding: 20px 40px;
+        }
+    }
+    .entry-footer{
+        padding-top: 40px;
+        border-top: 1px solid $_black;
+    }
+}
+
+@media screen and (min-width: $_large){
+    .type-inf_team_member{
+        .entry-header{
+            text-align: left;
+        }
+        .entry-header, .entry-content{
+            .desktop{
+                display: block;
+            }
+            .mobile{
+                display: none !important;
+            }
+        }
+    }
+}

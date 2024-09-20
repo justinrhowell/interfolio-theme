@@ -1,0 +1,38 @@
+/* Interfolio Imports */
+@import "fonts";
+@import "links";
+
+/* Underscores Imports and Rules */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+@import "headings";
+@import "copy";
+
+.has-interfolio-red-color{
+	color:$_red;
+}
+.has-interfolio-white-color{
+	color:$_white;
+}
+.has-interfolio-dark-blue-color{
+	color: $_darkblue;
+}
+.has-interfolio-light-blue-color{
+	color: $_lightblue;
+}
+.has-interfolio-gray-color{
+	color: $_gray;
+}
+.has-interfolio-black-color{
+	color: $_black;
+}

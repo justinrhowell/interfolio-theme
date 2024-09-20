@@ -1,0 +1,173 @@
+.interfolio-blog-post{
+    margin-bottom: 50px;
+    .entry-header{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+
+        &.has-featured-image{
+            .post-featured-image-container{
+                padding: 20px;
+            }
+            .post-meta-container{
+                .entry-title{
+                    text-align: center;
+                    font-size: 35px;
+                }
+            }
+        }
+
+        &.no-featured-image{
+            .post-meta-container{
+                .entry-title{
+                    font-size: 35px;
+                    text-align: center;
+                    margin: 20px 0;
+                }
+                .entry-meta{
+                    .post-author{
+                        flex-direction: column;
+                        .image-container{
+                            text-align: center;
+                        }
+                        .text-container{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .post-meta-container{
+            padding: 20px;
+            .tags-container{
+                text-align: center;
+                a{
+                    color: $_black;
+                }
+            }
+            .entry-meta{
+                .post-date{
+                    margin: 10px 0 20px;
+                    text-align: center;
+                    .posted-on a{
+                        color: $_black;
+                    }
+                }
+                .post-author{
+                    margin: 20px 0 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .image-container{
+                        text-align: right;
+                        width: 50%;
+                        .avatar-image{
+                            height:100px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .text-container{
+                        padding: 10px;
+                        width: 50%;
+                        span{
+                            display: block;
+                            &.byline{
+                                font-family: $_gotham_bold;
+                                a{
+                                    color: $_black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .entry-content{
+        margin: 10px auto 0;
+    }
+
+    .entry-content, .entry-footer{
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+body.has-header-block{
+    .type-inf_resource_single{
+        .entry-header{
+            display: none;
+        }
+        .entry-content{
+            margin-top: 0;
+            .interfolio-header-block{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $_large){
+    .interfolio-blog-post{
+        .entry-header{
+            flex-direction: row;
+
+            .post-meta-container{
+                .entry-meta{
+                    .post-author{
+                        .image-container{
+                            width: 25%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            &.has-featured-image{
+                .post-featured-image-container{
+                    width: 50%;
+                    padding: 20px;
+                }
+                .post-meta-container{
+                    width: 50%;
+                    .entry-title{
+                        text-align: left;
+                    }
+                    .tags-container{
+                        text-align: left;
+                    }
+                    .entry-meta{
+                        .post-date{
+                            text-align: left;
+                        }
+                        .post-author{
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
+            &.no-featured-image{
+                .post-meta-container{
+                    .entry-title{
+                        font-size: 60px;
+                    }
+                    .entry-meta{
+                        .post-author{
+                            .image-container{
+                                width: 15%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .entry-content{
+            margin-top: 25px;
+        }
+    }
+}

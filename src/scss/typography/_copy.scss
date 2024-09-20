@@ -1,0 +1,6 @@
+body { 
+	p {
+		  @include fluid-type(16px, 18px);
+		  color: $_black;
+	}
+}

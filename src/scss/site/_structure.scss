@@ -1,0 +1,7 @@
+body{
+    @media (min-width: $_xlarge){
+        .container{
+            max-width: 1200px;
+        }
+    }
+}

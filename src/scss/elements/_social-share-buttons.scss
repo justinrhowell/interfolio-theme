@@ -1,0 +1,43 @@
+.interfolio-share-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 10px 10px;
+    &.no-signature{
+        margin: 40px 10px;
+    }
+    .social-link{
+        background-color: $_darkblue;
+        height: 42px;
+        width: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        .fab{
+            color: white;
+        }
+    }
+}
+
+@media screen and (min-width: $_large){
+    .interfolio-share-buttons{
+        margin: 10px !important;
+        position: absolute;
+        top: 0;
+        left: -10%;
+        flex-direction: column;
+        .social-link{
+            margin: 16px 0;
+        }
+    }
+    body.has-header-block{
+        .interfolio-blog-post{
+            .interfolio-share-buttons{
+                position: static;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: 1rem 1rem 2rem !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+body.has-header-block{
+    .type-inf_news_and_events{
+        .entry-header{
+            display: none;
+        }
+        .entry-content{
+            margin-top: 0;
+            .interfolio-header-block{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

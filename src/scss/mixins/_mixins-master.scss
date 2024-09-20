@@ -1,0 +1,56 @@
+/* Interfolio Mixins */
+
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+  
+@mixin fluid-type($min-font-size, $max-font-size) {
+	$u1: unit($_small);
+	$u2: unit($_xlarge);
+	$u3: unit($min-font-size);
+	$u4: unit($max-font-size);
+
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+		& {
+			font-size: $min-font-size;
+			@media screen and (min-width: $_small) {
+				font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$_small}) / #{strip-unit($_xlarge - $_small)}));
+			}
+			@media screen and (min-width: $_xlarge) {
+				font-size: $max-font-size;
+			}
+		}
+	}
+}
+
+/* Underscores Default Mixins */
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}

@@ -1,0 +1,144 @@
+.site-footer {
+    background-color: $_darkblue;
+    max-width: none !important;
+
+    a:hover {
+        color: $_white;
+    }
+}
+
+.footer-links {
+    margin: 2em 0;
+    a {
+        display: block;
+        color: $_white;
+        margin: .2em 0;
+        margin-bottom: 1em;
+    }
+    .footer-children {
+        width: 100%;
+        a {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.links-row {
+    border-right: 1px solid $_white;
+    height: 100%;
+
+    .container {
+        margin-right: 1em;
+    }
+}
+
+.contact-text {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    a {
+        display: block;
+        margin-bottom: 1em;
+        color: $_white;
+    }
+    .contact-info {
+        span {
+            display: block;
+            margin: .2em 0;
+            color: $_white;
+        }
+
+        .contact-email {
+            margin-top: 2.5em;
+        }
+    }
+}
+
+.bottom-footer-container {
+    border-top: 1px solid $_white;
+}
+
+.footer-bottom {
+    margin: auto;
+}
+
+.copy-col {
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    .container {
+        padding-left: 0;
+        display: inline;
+
+        .menu {
+            display: inline;
+            margin-left: 0;
+
+            li:last-child {
+                a {
+                    border-right: none;
+                }
+            }
+        }
+    }
+
+    .bottom-footer-items {
+        display: inline;
+    }
+
+    span, a {
+        color: $_white;
+        padding: 0 .5em;
+        border-right: 1px solid $_white;
+    }
+
+    span {
+        padding-left: 0;
+        padding-right: .5em;
+    }
+
+    a:first-child {
+        padding-left: .15em;
+    }
+}
+
+.social-col {
+    margin-top: .4em;
+    margin-bottom: .5em;
+    
+    .social-icon {
+        margin-right: 1em;
+
+        img {
+            height: 1.25em;
+        }
+    }
+}
+
+#main-footer-menu {
+    li {
+        list-style: none;
+    }
+
+    .sub-menu {
+        margin-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: $_medium) {
+    .links-col, .social-col {
+        display: none;
+    }
+
+    .copy-col {
+        text-align: center;
+    }
+
+    .contact-col {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        border-top: none;
+    }
+}

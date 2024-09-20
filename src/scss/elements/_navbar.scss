@@ -1,0 +1,218 @@
+.navbar{
+    background-color: white;
+    a, span{
+        text-align: center;
+        color: $_black;
+        font-family:$_gotham_book;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+
+
+    .navbar-brand{
+          padding-top: 0px;
+
+        .alt-logo{
+            display: none;
+        }
+    }
+
+
+    .navbar-toggler{
+        border: none;
+
+        &:focus, &:active{
+            outline: none;
+        }
+
+        &[aria-expanded=false]{
+            .fa-times{
+                display: none;
+            }
+        }
+
+        &[aria-expanded=true]{
+            .fa-bars{
+                display: none;
+            }
+        }
+    }
+
+    #primary-menu{
+        #menu-navigation-menu{
+            margin: 0;
+
+            .menu-item{
+
+                .nav-link{
+                    text-align: center;
+                }
+
+                .dropdown-toggle::after{
+                    content:"\f078";
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 300;
+                    border: none;
+                    vertical-align: bottom;
+                    font-size: 12px;
+                    margin-bottom: .25em;
+                    margin-left: 0.35em;
+                    margin-right: -2px;
+                }
+
+                .dropdown-menu{
+                    background-color: white;
+                    z-index: 2000;
+
+                    &.show{
+                        display: flex;
+                        justify-content: flex-start;
+                        border: none;
+                        flex-wrap: wrap;
+                    }
+
+                    .menu-item{
+                        width: 50%;
+                        text-align: center;
+                        .dropdown-item{
+                            white-space: normal;
+                            padding: 0;
+                            text-align: center;
+                            margin: 10px auto;
+
+                            &:hover, &:focus{
+                                background-color: transparent;
+                            }
+
+                            .menu-icon {
+                                max-width: 90px;
+                                display: flex;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-actions{
+
+          button {
+            padding-left: 1em !important;
+        padding-right: 1em !important;
+        font-size: 16px !important;
+          }
+
+        .interfolio-search-button{
+            background: transparent;
+            border: none;
+            padding: 0px !important;
+            font-size: 16px;
+        }
+        .navbar-action-item{
+            text-align: center;
+            margin: .5rem;
+        }
+    }
+}
+
+.menu-overlay {
+    display: none;
+}
+
+@media screen and (min-width: $_large){
+
+    .navbar-container{
+        position: relative;
+
+        .navbar{
+
+            .navbar-actions{
+                flex-wrap: wrap;
+            }
+
+            #primary-menu{
+                #menu-navigation-menu{
+                    margin: 0;
+
+                    .menu-item{
+                        position: unset;
+
+                        &.dropdown{
+                            .dropdown-menu{
+                                width: 100%;
+                                background-color: $_white;
+                                padding: .5rem;
+                                border: none;
+                                border-radius: 0;
+                                left: 0;
+                                right: 0;
+                                margin: 5px auto;
+                                .menu-item{
+                                    width: 25%;
+
+                                    .dropdown-item{
+                                        margin-right: 100px;
+                                        display: inline-block;
+                                        width: fit-content;
+                                        color: $_black;
+                                    }
+                                }
+                            }
+                            &.open{
+                                padding-bottom: 0px;
+                                margin-bottom: -20px;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &.alt-navbar{
+                transition: background-color .25s ease;
+                background-color: white;
+                &.scrolled{
+                    background-color: white;
+                    .navbar-brand{
+                        .alt-logo{
+                            display: none;
+                        }
+                        .primary-logo{
+                            display: block;
+                        }
+                    }
+                }
+                &.at-top{
+                    background-color: transparent;
+                    .navbar-brand{
+                        .alt-logo{
+                            display: block;
+                        }
+                        .primary-logo{
+                            display: none;
+                        }
+                    }
+                    a,span{
+                        color: $_white;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-overlay{
+        position: absolute;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: .5em;
+        width: 100%;
+        z-index: 500;
+        background-color: white;
+        &.menu-open {
+            display: block;
+        }
+    }
+}

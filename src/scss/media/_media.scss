@@ -1,0 +1,56 @@
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+// Image Helper Classes
+
+.imagesize75 img {
+	max-width: 75px;
+}
+
+.imagesize100 img {
+	max-width: 100px;
+}
+
+.imagesize125 img {
+	max-width: 125px;
+}
+
+.imagesize150 img {
+	max-width: 150px;
+}
+
+.imagesize175 img {
+	max-width: 175px;
+}
+
+.imagesize200 img {
+	max-width: 200px;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+@import "captions";
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+@import "galleries";

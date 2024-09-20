@@ -1,0 +1,159 @@
+div.gform_wrapper{
+    .gform_fields{
+        list-style: none;
+        margin: 0;
+        .gfield{
+            .gfield_label{
+                display: none;
+            }
+            .ginput_complex{
+                span {
+                    width: 100%;
+                }
+            }
+            input, select{
+                border: none;
+                border-bottom: 1px solid $_black;
+                border-radius: 0;
+                background: transparent;
+                color: $_black;
+                padding-left: 0;
+                padding-right: 0;
+                position: relative;
+                height: 40px;
+                max-width: 100%;
+                width: 100%;
+                margin: 10px 0;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+
+            ul {
+              list-style: none;
+              margin: 0;
+            }
+
+            input{
+                &::placeholder{
+                    color: $_black;
+                }
+            }
+
+            .gfield_checkbox li input {
+              float: left;
+              width: auto;
+            }
+
+            .gfield_checkbox li label {
+              margin-top: 18px;
+              margin-left: 30px;
+              display: block;
+            }
+
+            .ginput_container_select{
+                position: relative;
+                select{
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    -o-appearance: none;
+                    appearance: none;
+
+                    &::-ms-expand{
+                        display: none;
+                    }
+
+                    option{
+                        padding-left: 0;
+                    }
+                }
+                &:after{
+                    content:"\f078";
+                    font-family: FontAwesome;
+                    border: none;
+                    vertical-align: bottom;
+                    position: absolute;
+                    right: 5px;
+                    top: 15px;
+                }
+            }
+
+            &.gform_validation_container{
+                display: none;
+            }
+        }
+    }
+
+    .gform_footer{
+        text-align: center;
+
+        .gform_button{
+            color: white;
+            border: none;
+            margin-top: 20px;
+            font-family: $_gotham_book !important;
+            background-color: $_darkblue !important;
+            padding: .5rem 1rem !important;
+            font-size: 18px !important;
+            border-radius: 25px !important;
+
+            &:hover{
+                background-color: $_darkblue_shade !important;
+            }
+        }
+    }
+}
+
+.gform_confirmation_wrapper{
+    border: none;
+    background: transparent;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (min-width: $_large){
+    div.gform_wrapper{
+        .gform_fields{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .gfield {
+                width: 49%;
+                &.name-field{
+                    width: 100%;
+                    .ginput_complex{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        span{
+                            width: 49%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sub-opt-in .gfield_checkbox li input {
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.sub-opt-in .gfield_checkbox li label {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    display: inline !important;
+}
+
+
+.opt-in-content-types .gform_wrapper .gform_fields .gfield {
+  margin-top: 10px !important;
+}
+
+.opt-in-content-types .gfield_description {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}

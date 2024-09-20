@@ -1,0 +1,61 @@
+.related-posts{
+    .crp-list-title{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .crp-list{
+        display: flex;
+        flex-direction: column;
+        margin: 0 -10px;
+
+        .related-posts-item{
+            padding: 10px;
+            .related-post-image-container{
+                position: relative;
+                .related-post-image-overlay{
+                    position: absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+
+                    .related-post-type{
+                        padding: 10px;
+                        color: white;
+                        background-color: $_darkblue;
+                        display: inline-block;
+                    }
+                }
+            }
+            .title-link{
+                color: $_black;
+                .related-post-title{
+                    font-family: $_gotham_book;
+                    font-size: 24px;
+                    margin: 10px 0;
+                }
+            }
+            .related-post-excerpt{
+                font-size: 16px;
+            }
+            .related-post-link{
+                color: $_black;
+                font-family: $_gotham_book;
+                color: #dc5460;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $_large){
+    .related-posts{
+        .crp-list{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            .related-posts-item{
+                width: 33%;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.interfolio-select-wrapper{
+    position: relative;
+    
+    .interfolio-select{
+        border: none;
+        background: transparent;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        font-size: 16px;
+        padding-right: 25px;
+
+        &:focus, &:active{
+            outline: none;
+        }
+    }
+
+    &::after{
+        content:"\f078";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 300;
+        font-size: 28px;
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,21 @@
+.interfolio-text-image-columns{
+    .image-column{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: $_medium){
+    .interfolio-text-image-columns{
+        .image-column, .text-column{
+            flex-basis: 100%!important;
+        }
+        .image-column{
+            margin: 0;
+            order: 1;
+        }
+        .text-column{
+            text-align: center;
+            order: 2;
+        }
+    }
+}
